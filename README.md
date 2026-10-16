@@ -15,7 +15,7 @@ A private Railway project named **Post2Drive Staging** has persistent Postgres a
 - [Infrastructure health JSON](https://post2drive-infra-smoke-test-staging.up.railway.app/api/health) — returns service check results only.
 - [Reserved marketplace URL](https://post2drive-web-staging.up.railway.app) — assigned to the web service, but not serving the application yet because the app source has not been connected.
 
-The smoke test is **not the marketplace**. Railway reports successful deployments for Postgres, Redis and the smoke-test function. External HTTP reachability for the smoke-test domain has not yet been independently confirmed by the available fetch tools.
+The smoke test is **not the marketplace**. A live POST probe to the health endpoint returned HTTP 200, and the endpoint returns 200 only when PostgreSQL SELECT 1 and Redis PING both succeed. The probe did not expose credentials or raw connection details.
 
 See [Staging and Release Status](docs/STAGING_AND_RELEASE_STATUS.md) for service IDs, validation limits and the deployment sequence.
 
