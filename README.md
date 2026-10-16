@@ -9,11 +9,15 @@
 
 ## Railway staging
 
-A private Railway project named **Post2Drive Staging** has been provisioned with persistent Postgres and Redis services, plus a configured web service.
+A private Railway project named **Post2Drive Staging** has persistent Postgres and Redis services, a configured but empty web service, and a separately deployed infrastructure smoke test.
 
-Reserved test URL: https://post2drive-web-staging.up.railway.app
+- [Infrastructure smoke-test page](https://post2drive-infra-smoke-test-staging.up.railway.app) — temporary status page that checks PostgreSQL and Redis connectivity.
+- [Infrastructure health JSON](https://post2drive-infra-smoke-test-staging.up.railway.app/api/health) — returns service check results only.
+- [Reserved marketplace URL](https://post2drive-web-staging.up.railway.app) — assigned to the web service, but not serving the application yet because the app source has not been connected.
 
-**The URL is not serving the app yet.** The web service has no source or deployment until the complete app is published to GitHub and CI passes. See [Staging and Release Status](docs/STAGING_AND_RELEASE_STATUS.md) for service IDs and next steps.
+The smoke test is **not the marketplace**. Railway reports successful deployments for Postgres, Redis and the smoke-test function. External HTTP reachability for the smoke-test domain has not yet been independently confirmed by the available fetch tools.
+
+See [Staging and Release Status](docs/STAGING_AND_RELEASE_STATUS.md) for service IDs, validation limits and the deployment sequence.
 
 ## Release posture
 
@@ -28,11 +32,11 @@ Post2Drive is in active development and is **not production-ready**.
 
 1. Keep staging and production credentials/data isolated.
 2. Never commit .env files, keys, tokens, signing keys, database dumps or personal data.
-3. Use synthetic test accounts/data only on the staging URL.
+3. Use synthetic test accounts/data only on the staging URLs.
 4. Do not enable real payments or email verification until provider credentials and end-to-end behavior have been verified.
 5. Preserve strict UK/GBP and India/INR marketplace separation.
 6. Do not force-push or reuse retired production infrastructure.
 
 ## Immediate next step
 
-Follow the source-import instructions in the app repository, push the complete source without force, confirm the Validate workflow passes, and connect the existing Railway web service to main in the staging environment only.
+Follow the source-import instructions in the app repository, push the complete source without force, confirm the Validate workflow passes, and connect the existing Post2Drive Web service to main in the staging environment only.
