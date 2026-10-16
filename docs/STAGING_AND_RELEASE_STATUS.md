@@ -22,9 +22,9 @@ Environment ID: 293eb264-dd1d-4eef-87ca-016943459edf
 | Post2Drive Infra Smoke Test | 04107a5c-3b23-4d89-8864-af75355530a3 | Function deployment succeeded; domain assigned |
 
 Infrastructure smoke-test URL: https://post2drive-infra-smoke-test-staging.up.railway.app  
-Health JSON: https://post2drive-infra-smoke-test-staging.up.railway.app/api/health
+Health endpoint: https://post2drive-infra-smoke-test-staging.up.railway.app/api/health
 
-The temporary page is explicitly labeled as an infrastructure check, not the marketplace. It checks PostgreSQL SELECT 1 and Redis PING without exposing secrets or raw connection errors. Railway reports a successful deployment/domain assignment, but independent external HTTP reachability has not yet been confirmed from available fetch tools.
+The temporary page is explicitly labeled as an infrastructure check, not the marketplace. A POST probe to the health endpoint returned HTTP 200. The endpoint returns 200 only if PostgreSQL SELECT 1 and Redis PING both succeed; credentials and raw connection errors are not exposed.
 
 Reserved marketplace URL: https://post2drive-web-staging.up.railway.app
 
@@ -34,11 +34,13 @@ The web URL is assigned to the existing web service on port 3000, but that servi
 
 The web service is configured for npm run build, npx prisma migrate deploy, npm run start, and /api/health. It references PostgreSQL and Redis through Railway private variable references. A staging-only NextAuth secret is set. Email verification is disabled in staging because no sender/provider key is configured; this is only for isolated tests and is not a production recommendation.
 
-The prepared source bundle includes a non-sensitive database-aware GET /api/health endpoint and CI contract check. It should return HTTP 200 only when PostgreSQL can be reached.
+The prepared source bundle includes a non-sensitive database-aware GET /api/health endpoint and a CI contract check. It should return HTTP 200 only when PostgreSQL can be reached.
 
-## Verification status
+## Current source bundle
 
-Targeted checks pass for market/currency isolation, UK/India timezone and DST edges, lifecycle/market guards, reliability-budget calculations, health endpoint contract, and ZIP integrity/exclusions. Full dependency installation, Prisma validation/migrations, TypeScript and Next.js production build remain unverified. The app source is not yet in GitHub, so the application Validate workflow has not run.
+SHA-256: 19c34528045b717ef5f6e7546f028a884ece41414073ac13c22b51d6b88a91fc
+
+Targeted checks pass for market/currency isolation, UK/India timezone and DST edges, lifecycle/market guards, reliability-budget calculations, app health endpoint contract, and ZIP integrity/exclusions. Full dependency installation, Prisma validation/migrations, TypeScript and Next.js production build remain unverified. The app source is not yet in GitHub, so the application Validate workflow has not run.
 
 ## Next release gates
 
