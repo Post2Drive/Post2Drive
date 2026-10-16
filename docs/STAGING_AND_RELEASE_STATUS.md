@@ -61,3 +61,11 @@ The source is built and deployed to **staging**, but Post2Drive is still **not p
 6. Add/verify backups, alerting, operational monitoring, incident response and production data isolation before promotion.
 
 Do not use production customer data or credentials in staging. Do not force-push, connect to the retired production database, or promote the staging deployment to production before the release gates pass.
+
+## QA follow-up — 17 October 2026
+
+The 10,000-account live staging QA attempt on 16 October was accepted but **aborted before workflow/route-matrix execution**. Run `20261016222806-5d3d5cfd-5401-4722-b567-48901b686fcd` recorded 0/10,000 accounts created, 0/10,000 route-matrix requests executed, and 10,000 failed signup assertions. Railway HTTP logs show `POST /api/signup` returning HTTP 400. Inspection of the canonical app source found that the synthetic signup payload omitted required `termsAccepted`, `termsVersion`, and `fleetVehicleCount` fields. A staging-branch-only fix was committed as `a0ca211344fec5a571288061a8801f210837a22f`; its validation workflow is running. It has **not yet been confirmed deployed to Railway**, and the 10,000-request run must not be repeated until that commit is deployed and checked.
+
+The cleanup log for the failed run reports deletion of 10,000 QA API-metric records and preservation of audit events/run summary. The run's initial console summary still said `syntheticDataRetained: true`; the cleanup implementation now writes cleanup metadata to the persisted summary, but that persisted value must be verified after the next run.
+
+Keep PR [#8](https://github.com/Post2Drive/post2drive-app/pull/8) open and in draft. Do not merge or promote this branch to production. Production must remain unchanged. The root `Post2Drive/Post2Drive` repository is documentation/release notes only; application fixes belong in `Post2Drive/post2drive-app`.
