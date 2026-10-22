@@ -1,0 +1,78 @@
+{
+  "business": "Post2Drive UK pilot (hypothesis, not validated)",
+  "target": "UK owner-drivers and small courier/freight operators in one selected region/corridor who actively seek subcontract or return loads",
+  "where": "One UK region/corridor to be selected after interviews; do not generalise nationally",
+  "age": [
+    21,
+    65
+  ],
+  "segments": [
+    {
+      "name": "Solo owner-driver / van courier",
+      "share": 0.55,
+      "income": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Small fleet operator (2–15 vehicles)",
+      "share": 0.3,
+      "income": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Independent transporter / subcontractor",
+      "share": 0.15,
+      "income": [
+        0,
+        0
+      ]
+    }
+  ],
+  "behaviours": [
+    {
+      "name": "Actively searching",
+      "share": 0.3,
+      "how": "Checks load boards or messaging groups several times a day"
+    },
+    {
+      "name": "Route/backload optimiser",
+      "share": 0.25,
+      "how": "Looks for jobs that fit an existing route or reduce empty miles"
+    },
+    {
+      "name": "Incumbent loyalist",
+      "share": 0.2,
+      "how": "Keeps a paid board if the job volume is dependable"
+    },
+    {
+      "name": "Price-sensitive tester",
+      "share": 0.15,
+      "how": "Tries free or low-cost services and cancels quickly if value is unclear"
+    },
+    {
+      "name": "Relationship-led",
+      "share": 0.1,
+      "how": "Gets most work from known brokers, local firms and referrals"
+    }
+  ],
+  "objections": [
+    "Will there be enough real jobs in my area and for my vehicle?",
+    "Why pay before I know the platform produces work?",
+    "Are posters and job details verified?",
+    "Can I see payment terms and avoid time-wasting or fake listings?",
+    "How is this better than the load boards or WhatsApp groups I already use?",
+    "Will it work on my phone while I am on the road?",
+    "Can I cancel without being locked into a long contract?",
+    "Does this platform serve my routes and vehicle type, not just another market?"
+  ],
+  "habits": [
+    "Uses a phone between jobs and needs low-friction browsing",
+    "Evaluates the platform by relevant job availability and the quality of posters",
+    "Needs to consider fuel, empty miles, time, vehicle capacity and payment terms before bidding",
+    "May use several work-finding channels in parallel"
+  ]
+}
