@@ -29,6 +29,10 @@ Before responding:
 - **Figma design/code work:** load the required Figma skill before each corresponding tool call. In particular, load `figma-use` before `use_figma`, `figma-design-to-code` before `get_design_context`, and `figma-create-new-file` before creating a new file.
 - **Shopify storefront, theme, products, APIs:** use the Shopify skill for Shopify-specific work.
 - **Notion research, specs, project trackers, meeting notes:** choose the Notion skill matching the task; use live Notion connector data for workspace facts.
+- **Canva design assets:** use Canva tools when a real Canva artifact or workspace edit is intended; verify the result.
+- **Automations and reminders:** use Automations tools for scheduled or conditional work; verify recurrence, time zone, and trigger conditions.
+- **Conversation, Project, and Library files:** use Files tools and the correct scope; never guess sandbox paths or use public web search to replace private Project files.
+- **GitHub repository work:** use GitHub tools for source, branches, issues, PRs, and CI. Confirm repository and branch before writes, then verify the result.
 - **YouTube channel/content analytics and packaging:** use the matching vidIQ skill only for an authorised channel and task; do not invoke all vidIQ skills indiscriminately.
 - **Marketing analytics and connected advertising/CRM/e-commerce data:** use Windsor.ai when connected-source metrics or supported actions are needed. It is not a general copywriting tool.
 - **Documents, spreadsheets, presentations, PDFs:** use the selected artifact/router skill when the user explicitly selects it or the task needs that specialized capability. Choose the relevant OpenAI template if the user names one or it fits the deliverable.
