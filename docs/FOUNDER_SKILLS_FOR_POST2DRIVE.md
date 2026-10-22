@@ -44,3 +44,8 @@ Upstream projects:
 - MiroFish: https://github.com/666ghj/MiroFish
 
 Verify current upstream licenses, setup requirements, security controls, and provider costs before installing either application.
+
+
+## Query and plugin routing
+
+Use `.claude/skills/post2drive-query-router/SKILL.md` and `docs/SKILLS_AND_PLUGIN_ROUTING.md` to select the right skill and connected plugin for each request. The policy is selective: use only the relevant capabilities rather than invoking every plugin on every query. These files document routing; they do not install plugins or guarantee automatic loading in every runtime.
