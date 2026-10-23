@@ -10,7 +10,6 @@ Primary router skill: `.claude/skills/post2drive-query-router/SKILL.md`.
 
 - `.claude/skills/founder-*/` — business validation, competition, pricing, offer, marketing, brand, operations, launch and planning.
 - `.claude/skills/post2drive-harvey-prospecting/SKILL.md` — prospect research and human-reviewed outreach preparation.
-- `.claude/skills/post2drive-mirofish-simulation/SKILL.md` — structured market simulation planning and validation design.
 - Engineering work belongs in `Post2Drive/post2drive-app`, not this project/profile repository.
 
 ## Plugin routing overview
@@ -24,7 +23,6 @@ Primary router skill: `.claude/skills/post2drive-query-router/SKILL.md`.
 | Shopify store and commerce | Shopify skill/tools | Assume store or payment state without checking |
 | Notion workspace research and project tracking | Matching Notion skill/tools | Substitute general guesses for workspace data |
 | Sales prospecting | Harvey-style skill; actual Harvey only if installed and approved | Send outreach without explicit approval |
-| Market simulation | MiroFish-style skill; actual MiroFish only if installed and approved | Treat synthetic agents as customers or forecasts |
 | Connected marketing analytics | Windsor.ai when relevant source is connected | Use for generic marketing-copy tasks |
 | YouTube analytics and packaging | The specific vidIQ skill matching the request | Invoke every vidIQ workflow |
 | Documents, spreadsheets, presentations, PDFs | Relevant artifact router/template | Claim a file was created unless verified |
