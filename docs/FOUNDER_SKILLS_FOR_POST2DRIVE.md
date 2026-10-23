@@ -34,16 +34,13 @@ This is a copied snapshot, not an automatic sync. Review upstream updates before
 Two Post2Drive-specific workflows are included alongside the founder skills:
 
 - `.claude/skills/post2drive-harvey-prospecting/SKILL.md` — prospect research, qualification, and human-reviewed outreach preparation using a Harvey-style workflow.
-- `.claude/skills/post2drive-mirofish-simulation/SKILL.md` — structured market and multi-agent simulation planning using MiroFish-style scenarios.
-- `docs/POST2DRIVE_HARVEY_AND_MIROFISH.md` — overview and suggested combined workflow.
 
-These are local workflow instructions, not copies of either upstream application. They do not install or execute Harvey or MiroFish. Keep all prospect outreach human-approved, treat simulation outputs as hypotheses rather than demand evidence, and keep the skills in this research/profile repository rather than `post2drive-app`.
+These are local workflow instructions, not copies of the upstream application. They do not install or execute Harvey. Keep all prospect outreach human-approved and keep the skill in this research/profile repository rather than `post2drive-app`.
 
 Upstream projects:
 - Harvey: https://github.com/ethanplusai/harvey
-- MiroFish: https://github.com/666ghj/MiroFish
 
-Verify current upstream licenses, setup requirements, security controls, and provider costs before installing either application.
+Verify current upstream licenses, setup requirements, and security controls before installing the application.
 
 
 ## Query and plugin routing
