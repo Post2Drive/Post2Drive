@@ -20,7 +20,6 @@ Fetched and inspected all 11 imported Founder skills:
 
 Fetched and inspected all three Post2Drive-specific skills:
 - `post2drive-harvey-prospecting`
-- `post2drive-mirofish-simulation`
 - `post2drive-query-router`
 
 The available plugin skill catalogue returned 89 entries in this review. Major families represented include Railway, Windsor.ai, vidIQ, Figma, Shopify, Product Design, MagicPath, Notion, OpenAI artifact templates and routers, plugin management, and Superpowers engineering workflows. The connected tool inventory also includes GitHub, Canva, Automations, and Files. This is a routing inventory, not a requirement to invoke every skill for every request.
@@ -34,10 +33,6 @@ The 11 skills form a sensible business workflow from board review, competitor re
 ### Harvey-style prospecting
 
 The skill correctly separates public-source research from live outreach, requires sourced signals, forbids fabricated contacts and unapproved sending, and recommends tracking real commercial outcomes. The skill does not install Harvey or run its engine.
-
-### MiroFish-style simulation
-
-The skill correctly distinguishes in-chat qualitative analysis, an actual engine run, and real customer validation. It prevents simulated agents being presented as market facts and keeps installation/provider setup behind explicit approval. The skill does not install or run MiroFish.
 
 ### Query router
 
