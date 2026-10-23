@@ -1,3 +1,7 @@
+> **Status audit — 23 October 2026 (GitHub verified; Railway dashboard recheck blocked).** This note supersedes older date-stamped status snapshots below where they conflict. This repository's latest `main` commit is `5c8787a4` (17 Oct). PR #2 (Founder business-validation skills) is closed without merge; PR #1 (staging-status documentation sync) is merged. The application repository is the source of truth for code. Current app-repo GitHub state: PR #43 (integration branch to main) and PR #44 (audit follow-up branch to integration) are open drafts; neither is merged. PR #12 is closed unmerged. CI on PR #44 head `21a41b45` passed Validate, Security Scan, CodeQL and Android Capacitor build on 23 Oct. These checks do not prove live staging E2E or launch readiness.
+>
+> **Railway limitation:** the connected Railway tools could list the project but returned a permissions error when asked to inspect the staging environment. Therefore, the live dashboard's current deployment, service health, database targets and pending changes could not be independently re-verified. Service/commit details below are the last recorded 18 Oct snapshot, not a fresh live confirmation.
+
 # Post2Drive
 
 **Post2Drive Logistics Network** is a UK-first freight and courier marketplace project, with UK and India markets separated at the application and data-access layers.
